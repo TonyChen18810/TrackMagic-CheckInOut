@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>TrackMagic_CheckInOut_aspdotnetcore</RootNamespace>
+  </PropertyGroup>
+
+
+
+  <ItemGroup>
+    <PackageReference Include="OpenCvSharp3-AnyCPU" Version="4.0.0.20181129" />
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    <PackageReference Include="System.IO.Ports" Version="4.7.0" />
+    <PackageReference Include="LibUsbDotNet" Version="2.2.29" />
+    <PackageReference Include="CameraControl.Devices" Version="2.1.0-beta" />
+    <PackageReference Include="FirebaseDatabase.net" Version="4.0.4" />
+    <PackageReference Include="bootstrap" Version="4.4.1" />
+    <PackageReference Include="FirebaseAuthentication.net" Version="4.0.0-alpha.2" />
+    <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
+    <PackageReference Include="FireSharp.Serialization.JsonNet" Version="1.1.0" />
+    <PackageReference Include="Bytescout.BarCode.Reader" Version="11.0.0.1959" />
+    <PackageReference Include="Aspose.BarCode" Version="20.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <Content Remove="Pages\ItemTrxList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\webcamjs\" />
+    <Folder Include="Models\" />
+    <Folder Include="Services\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="_Reference only\" />
+    <Folder Include="Controllers\WebCamJs\" />
+    <Folder Include="Controllers\WebCamJs\Models\" />
+    <Folder Include="Controllers\WebCamJs\EntityStore\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Controllers\EmptyClass.cs" />
+  </ItemGroup>
+</Project>
